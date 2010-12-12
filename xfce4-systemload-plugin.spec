@@ -1,17 +1,18 @@
+%define url_ver %(echo %{version} | cut -c 1-3 )
+
 Summary:	System load plugin for the Xfce panel
 Name:		xfce4-systemload-plugin
-Version:	0.4.2
-Release:	%mkrel 12
+Version:	1.0.0
+Release:	%mkrel 1
 License:	BSD
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
-Source0:	http://goodies.xfce.org/releases/xfce4-systemload-plugin/%{name}-%{version}.tar.bz2
-Patch0:		01_fix-bar-colors.patch
-Patch1:		02_fix-wrong-free-memory-value.patch
-Patch3:		%{name}-0.4.2-fix-uptime-polish-translation.patch
-Requires:	xfce4-panel >= 4.4.2
-BuildRequires:	xfce4-panel-devel >= 4.4.2
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
+Requires:	xfce4-panel >= 4.7
+BuildRequires:	xfce4-panel-devel >= 4.7
 BuildRequires:	perl(XML::Parser)
+BuildRequires:	libxfce4util-devel
+BuildRequires:	libxfcegui4-devel
 Obsoletes:	xfce-systemload-plugin
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -20,9 +21,6 @@ A system load panel plugin for the Xfce Desktop Environment.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
-%patch3 -p1
 
 %build
 %configure2_5x
