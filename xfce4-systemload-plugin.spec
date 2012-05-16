@@ -34,5 +34,5 @@ A system load panel plugin for the Xfce Desktop Environment.
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS
-%{_libdir}/xfce4/panel-plugins/*
-%{_datadir}/xfce4/panel-plugins/*
+%{_libdir}/xfce4/panel/plugin/*
+%{_datadir}/xfce4/panel/plugin/*
