@@ -33,5 +33,5 @@ A system load panel plugin for the Xfce Desktop Environment.
 
 %files -f %{name}.lang
 %doc README ChangeLog AUTHORS
-%{_libdir}/xfce4/panel/plugin/*
-%{_datadir}/xfce4/panel/plugin/*
+%{_libdir}/xfce4/panel/plugins/libsystemload.so
+%{_datadir}/xfce4/panel/plugins/systemload.desktop
