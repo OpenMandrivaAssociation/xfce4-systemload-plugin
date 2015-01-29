@@ -2,8 +2,8 @@
 
 Summary:	System load plugin for the Xfce panel
 Name:		xfce4-systemload-plugin
-Version:	1.1.1
-Release:	3
+Version:	1.1.2
+Release:	1
 License:	BSD
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
@@ -23,7 +23,7 @@ A system load panel plugin for the Xfce Desktop Environment.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
