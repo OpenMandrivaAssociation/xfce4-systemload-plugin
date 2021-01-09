@@ -3,7 +3,7 @@
 
 Summary:	System load plugin for the Xfce panel
 Name:		xfce4-systemload-plugin
-Version:	1.2.3
+Version:	1.2.4
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Xfce
@@ -32,6 +32,6 @@ chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README ChangeLog AUTHORS
+%doc README* ChangeLog AUTHORS
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
