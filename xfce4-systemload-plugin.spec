@@ -35,3 +35,6 @@ chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
 %doc README* ChangeLog AUTHORS
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
+%{_iconsdir}/hicolor/*x*/apps/org.xfce.panel.systemload.png
+%{_iconsdir}/hicolor/scalable/apps/org.xfce.panel.systemload.svg
+
