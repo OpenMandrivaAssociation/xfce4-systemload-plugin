@@ -7,7 +7,7 @@ Version:	1.3.2
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Xfce
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
+URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 Requires:	xfce4-panel
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
