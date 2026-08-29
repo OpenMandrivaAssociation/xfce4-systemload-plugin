@@ -3,20 +3,16 @@
 
 Summary:	System load plugin for the Xfce panel
 Name:		xfce4-systemload-plugin
-Version:	1.3.3
+Version:	1.4.0
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
 Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 Requires:	xfce4-panel
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	meson
 BuildRequires:	make
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
-BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
 Obsoletes:	xfce-systemload-plugin
@@ -28,16 +24,16 @@ A system load panel plugin for the Xfce Desktop Environment.
 %autosetup -p1
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README* ChangeLog AUTHORS
+%doc README* AUTHORS
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
 %{_iconsdir}/hicolor/*x*/apps/org.xfce.panel.systemload.png
